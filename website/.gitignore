@@ -1,0 +1,12 @@
+# Dependencies
+node_modules/
+
+# Build output
+build/
+.docusaurus/
+
+# Package managers
+.pnpm-store/
+
+# Misc
+.DS_Store

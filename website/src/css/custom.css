@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.cn/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+/**
+ * Trivium design tokens.
+ * Indigo = Code, Teal = Research, Amber = Write — the three arts.
+ */
+
+:root {
+  --ifm-color-primary: #5457e8;
+  --ifm-color-primary-dark: #4043dc;
+  --ifm-color-primary-darker: #3336cf;
+  --ifm-color-primary-darkest: #292ba8;
+  --ifm-color-primary-light: #6d70eb;
+  --ifm-color-primary-lighter: #7c7eee;
+  --ifm-color-primary-lightest: #a3a5f3;
+
+  --trivium-indigo: #5457e8;
+  --trivium-teal: #0b7a6e;
+  --trivium-amber: #a65a08;
+
+  --trivium-indigo-soft: rgba(84, 87, 232, 0.1);
+  --trivium-teal-soft: rgba(11, 122, 110, 0.1);
+  --trivium-amber-soft: rgba(166, 90, 8, 0.1);
+
+  --ifm-font-family-base: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --ifm-font-family-monospace: 'JetBrains Mono', 'SFMono-Regular', Menlo, monospace;
+  --ifm-code-font-size: 92%;
+  --ifm-border-radius: 10px;
+
+  --docusaurus-highlighted-code-line-bg: rgba(84, 87, 232, 0.12);
+}
+
+[data-theme='dark'] {
+  --ifm-color-primary: #7b7ef0;
+  --ifm-color-primary-dark: #5f63ec;
+  --ifm-color-primary-darker: #4b4fe9;
+  --ifm-color-primary-darkest: #3336cf;
+  --ifm-color-primary-light: #9799f4;
+  --ifm-color-primary-lighter: #a7a9f6;
+  --ifm-color-primary-lightest: #cfd0fa;
+
+  --trivium-indigo: #7b7ef0;
+  --trivium-teal: #14b8a6;
+  --trivium-amber: #f5a623;
+
+  --trivium-indigo-soft: rgba(123, 126, 240, 0.14);
+  --trivium-teal-soft: rgba(20, 184, 166, 0.14);
+  --trivium-amber-soft: rgba(245, 166, 35, 0.12);
+
+  --docusaurus-highlighted-code-line-bg: rgba(123, 126, 240, 0.16);
+}
+
+/* ---------- Navbar ---------- */
+
+.navbar {
+  border-bottom: 1px solid var(--ifm-toc-border-color);
+  box-shadow: none;
+}
+
+.navbar__title {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.header-github-link {
+  display: flex;
+  align-items: center;
+  padding: 0.35rem;
+}
+
+.header-github-link::before {
+  content: '';
+  display: block;
+  width: 22px;
+  height: 22px;
+  background-color: var(--ifm-navbar-link-color);
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12'/%3E%3C/svg%3E")
+    center / contain no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12'/%3E%3C/svg%3E")
+    center / contain no-repeat;
+  transition: background-color 200ms ease;
+}
+
+.header-github-link:hover::before {
+  background-color: var(--ifm-color-primary);
+}
+
+.navbar-download-button {
+  border: 1px solid var(--ifm-color-primary);
+  border-radius: 8px;
+  padding: 0.3rem 0.9rem !important;
+  margin-left: 0.5rem;
+  font-weight: 600;
+  color: var(--ifm-color-primary) !important;
+  transition: background-color 200ms ease, color 200ms ease, transform 200ms ease;
+}
+
+.navbar-download-button:hover {
+  background-color: var(--ifm-color-primary);
+  color: #fff !important;
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+/* ---------- Docs polish ---------- */
+
+.theme-doc-markdown table {
+  font-size: 0.95rem;
+}
+
+.theme-doc-markdown table th {
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.theme-doc-markdown kbd {
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 0.8em;
+  padding: 0.15em 0.45em;
+  border: 1px solid var(--ifm-toc-border-color);
+  border-bottom-width: 2px;
+  border-radius: 6px;
+  background: var(--ifm-background-surface-color);
+}
+
+.footer--dark {
+  background: #131418;
+}
+
+.menu__link--active {
+  font-weight: 600;
+}
+
+/* Official wordmark in the navbar (contains the "Trivium" text) */
+.navbar__logo {
+  height: 27px;
+  width: auto;
+  max-width: 160px;
+  object-fit: contain;
+}
